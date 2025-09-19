@@ -85,10 +85,10 @@ public class AddCityFragment extends DialogFragment{
                     City city = (City)savedInstanceState.getSerializable("city");
                     if(city != null){
                         //if yes, set city and province name
-                        listener.editCity(city, "edit city", provinceName);
+                        listener.editCity(city, cityName, provinceName);
                     }
                     else{
-                        listener.addCity(new City("add city", provinceName));
+                        listener.addCity(new City(cityName, provinceName));
                     }
                 })
                 .create();
